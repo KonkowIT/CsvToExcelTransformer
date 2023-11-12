@@ -1,0 +1,61 @@
+﻿<Window x:Class="CsvToExcelTransformer_Win.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title=""
+        Height="450"
+        Width="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel
+                Margin="30,0"
+                VerticalAlignment="Center">
+
+                <Image
+                    Source="/logo.png"
+                    Height="200"
+                    HorizontalAlignment="Center"
+                    Name="LogoImage"
+                    AutomationProperties.Name="/logo" />
+
+                <Label
+                    TextBlock.FontSize="32"
+                    Content="CSV to Excel database converter"
+                    HorizontalAlignment="Center"
+                    Name="HeaderLabel" />
+
+                <StackPanel
+                    Margin="30,0,30,10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+
+                    <Button
+                        Content="Wskaż plik"
+                        Name="PathButton"
+                        Click="SelectFile"
+                        AutomationProperties.HelpText="Opens File Explorer/Finder to select a csv file"
+                        HorizontalAlignment="Center" Margin="0,0,19,0" />
+
+                    <TextBox
+                        Name="EntryBox"
+                        Text="" 
+                        Width="300"/>
+
+                </StackPanel>
+
+                <Button
+                    Content="Generuj plik Excel"
+                    Name="GenerateExcel"
+                    Click="GenerateExcelFile"
+                    AutomationProperties.HelpText="Counts the number of times you click"
+                    HorizontalAlignment="Center" />
+
+                <Label
+                    Content="Exiges, 2023 ©"
+                    FontSize="12"
+                    HorizontalAlignment="Center"
+                    AutomationProperties.Name="Welcome to dot net Multi platform App U I" Margin="0,15,0,0" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
